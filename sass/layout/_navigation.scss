@@ -1,0 +1,23 @@
+nav {
+    @include clearfix;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+}
+
+.nav {
+    list-style: none;
+    float: right;
+
+    li {
+        display: inline-block;
+        margin-right: 30px;
+        
+        a:link,
+        a:visited {
+         @include style-link-text($color-dark-grey);
+         
+        }
+    }
+}
+
