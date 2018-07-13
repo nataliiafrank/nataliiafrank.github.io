@@ -1,0 +1,30 @@
+.button--yellow {
+    &:link,
+    &:visited {
+        background-color: $color-primary;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1.5rem 2rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+}

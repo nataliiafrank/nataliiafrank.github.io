@@ -1,5 +1,35 @@
 .section-about {
-    background-color: $color-grey-light-1;
-    padding: 25rem 0;
-    margin-top: -20vh;
+    padding: 10rem;
+    text-align: center;
+
+    &__text {
+        font-size: 3rem;
+        color: $color-black;
+        margin-bottom: 3rem;
+    }
+}
+
+.button {
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: inline-block;
+}
+
+.section-skills {
+    height: 70vh;
+
+    &--yellow {
+        background-color: $color-primary;
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
+    }
+}
+
+.section-projects__row {
+    height: 30vh;
+    background-color: $color-primary;
+}
+
+.border {
+    border-left: 6rem solid $color-white;
+    border-right: 6rem solid $color-white;
 }

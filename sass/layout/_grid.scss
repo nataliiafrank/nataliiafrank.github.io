@@ -1,6 +1,5 @@
 .row {
-    max-width: $grid-width;
-    margin: 0 auto;
+    max-width: 100vw;
     color: $color-black;
    
     &:not(:last-child) {
@@ -11,14 +10,16 @@
 
     [class^="col-"] {
         float: left;
-        
-        &:not(:last-child) {
-            margin-right: $gutter-horizontal;
-        }
     }
 
     .col-1-of-2 {
-        width: calc((100% - #{$gutter-horizontal}) / 2);
+        width: calc(100% / 2);
+        height: 100%;
+    }
+
+    .col-1-of-2-with-gutter {
+        width: calc(100% / 2);
+        height: 100%;
     }
 
     .col-1-of-3 {

@@ -8,16 +8,15 @@ nav {
 .nav {
     list-style: none;
     float: right;
-
     li {
         display: inline-block;
         margin-right: 30px;
-        
-        a:link,
-        a:visited {
-         @include style-link-text($color-dark-grey);
-         
+
+        &:not(:last-child) {
+            a:link,
+            a:visited {
+                @include style-link-text($color-dark-grey);
+            }
         }
     }
 }
-
