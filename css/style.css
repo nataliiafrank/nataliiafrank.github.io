@@ -72,6 +72,11 @@ body {
   letter-spacing: 2px;
   display: inline-block; }
 
+.heading-section {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem; }
+
 .button--yellow:link, .button--yellow:visited {
   background-color: #fee333;
   text-decoration: none;
@@ -186,10 +191,24 @@ nav {
   display: inline-block; }
 
 .section-skills {
-  height: 70vh; }
+  height: 45vh;
+  text-align: center; }
   .section-skills--yellow {
     background-color: #fee333;
     clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%); }
+  .section-skills .devicon {
+    font-size: 2rem;
+    color: #fcdb07; }
+  .section-skills table {
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 3rem; }
+    .section-skills table td {
+      padding: 1rem; }
+      .section-skills table td i {
+        margin-right: 1rem; }
+  .section-skills h3 {
+    margin: 2rem 0; }
 
 .section-projects__row {
   height: 30vh;
