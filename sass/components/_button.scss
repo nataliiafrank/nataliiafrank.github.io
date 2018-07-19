@@ -1,3 +1,9 @@
+.button {
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: inline-block;
+}
+
 .button--yellow {
     &:link,
     &:visited {

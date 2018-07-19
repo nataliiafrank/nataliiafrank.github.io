@@ -10,16 +10,21 @@
 
     [class^="col-"] {
         float: left;
+        height: 100%;
     }
 
     .col-1-of-2 {
         width: calc(100% / 2);
-        height: 100%;
+        
     }
 
     .col-1-of-2-with-gutter {
-        width: calc(100% / 2);
-        height: 100%;
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 2);
+        margin-right: $gutter-horizontal;
+
+        &:not(:last-child) {
+            margin-left: $gutter-horizontal;
+        }
     }
 
     .col-1-of-3 {

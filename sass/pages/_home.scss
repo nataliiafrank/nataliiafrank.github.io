@@ -1,7 +1,6 @@
 .section-about {
     padding: 10rem;
     text-align: center;
-
     &__text {
         font-size: 3rem;
         color: $color-black;
@@ -9,53 +8,59 @@
     }
 }
 
-.button {
-    margin: 0 auto;
-    padding: 2rem 0;
-    display: inline-block;
-}
-
 .section-skills {
     height: 45vh;
     text-align: center;
-
     &--yellow {
         background-color: $color-primary;
         clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
     }
-
     .devicon {
         font-size: 2rem;
-        color: #fcdb07;
+        color: $color-primary-dark;
     }
-
     table {
         font-size: 2rem;
         text-align: left;
         margin-left: 3rem;
-
         td {
             padding: 1rem;
-            
             i {
                 margin-right: 1rem;
             }
         }
     }
-
     h3 {
-       margin: 2rem 0; 
+        margin-bottom: 2rem;
     }
 }
 
-
-
 .section-projects__row {
     height: 30vh;
-    background-color: $color-primary;
+    margin-bottom: 4rem;
+    .border {
+        border: .3rem solid $color-black;
+    }
 }
 
-.border {
-    border-left: 6rem solid $color-white;
-    border-right: 6rem solid $color-white;
+.section-contact {
+    height: 60vh;
+    background-color: $color-primary; // clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
+    -webkit-clip-path: polygon(50% 25%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    text-align: right;
+    position: relative;
+
+    // .heading-tertiary {
+    //     margin-top: 6rem;
+    // }
+
+    .section-contact__text {
+        margin: 2rem 0;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

@@ -1,6 +1,6 @@
-body{
+body {
     font-family: 'Lato', sans-serif;
-    /* font-size: 16; default*/
+    /* font-size: 10px = 1rem*/
     font-weight: 400;
     line-height: 1.7;
     color: $color-dark-grey;
@@ -10,7 +10,6 @@ body{
     color: $color-black;
     text-transform: uppercase;
     backface-visibility: hidden;
-
     &--main {
         display: inline-block;
         font-size: 3.5rem;
@@ -19,15 +18,12 @@ body{
         margin-bottom: 1rem;
         background-color: $color-white;
         padding: 0 1rem;
-    
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-    
         /* animation-delay: 3s;
         animation-iteration-count: 3; */
     }
-    
     &--sub {
         display: inline-block;
         font-size: 2rem;
@@ -36,21 +32,31 @@ body{
         background-color: $color-black;
         color: $color-white;
         padding: 0 1rem;
-    
         animation: moveInRight 1s ease-out;
     }
 }
 
 .heading-secondary {
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3.5rem;
+    font-weight: 300;
+    font-size: 3rem;
     letter-spacing: 2px;
     display: inline-block;
 }
 
-.heading-section {
+.heading-tertiary {
+    display: inline-block;
     text-transform: uppercase;
-    font-weight: 300;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 70rem;
+    letter-spacing: 1rem;
+    background-color: $color-black;
+    color: $color-white;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+}
+
+.text-main {
+    font-size: 2.2rem;
+    color: $color-black;
 }
