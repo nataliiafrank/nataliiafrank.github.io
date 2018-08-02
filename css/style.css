@@ -208,19 +208,25 @@ nav {
   .section-skills--yellow {
     background-color: #fee333;
     clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%); }
+  .section-skills .skills-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .section-skills .devicon {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #fcdb07; }
-  .section-skills table {
-    font-size: 2rem;
-    text-align: left;
-    margin-left: 3rem; }
-    .section-skills table td {
-      padding: 1rem; }
-      .section-skills table td i {
-        margin-right: 1rem; }
   .section-skills h3 {
     margin-bottom: 2rem; }
+  .section-skills .table-skills {
+    font-size: 2rem;
+    width: 100%;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .section-skills .table-skills div {
+      margin: 0.8rem 1.5rem; }
 
 .section-projects__row {
   height: 30vh;
@@ -242,3 +248,11 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+  .section-contact .section-contact__icons {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: #777;
+    font-size: 3.3rem; }
+    .section-contact .section-contact__icons:hover {
+      color: #333; }

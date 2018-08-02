@@ -15,23 +15,44 @@
         background-color: $color-primary;
         clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
     }
+    
+    .skills-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .devicon {
-        font-size: 2rem;
+        font-size: 3rem;
         color: $color-primary-dark;
     }
-    table {
-        font-size: 2rem;
-        text-align: left;
-        margin-left: 3rem;
-        td {
-            padding: 1rem;
-            i {
-                margin-right: 1rem;
-            }
-        }
-    }
+    // table {
+    //     font-size: 2rem;
+    //     text-align: left;
+    //     margin-left: 3rem;
+    //     td {
+    //         padding: 1rem;
+    //         i {
+    //             margin-right: 1rem;
+    //         }
+    //     }
+    // }
     h3 {
         margin-bottom: 2rem;
+    }
+
+    .table-skills {
+        font-size: 2rem;
+        width: 100%;
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            margin: 0.8rem 1.5rem;
+        }
     }
 }
 
@@ -51,10 +72,6 @@
     text-align: right;
     position: relative;
 
-    // .heading-tertiary {
-    //     margin-top: 6rem;
-    // }
-
     .section-contact__text {
         margin: 2rem 0;
         text-align: center;
@@ -62,5 +79,17 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .section-contact__icons {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        color: $color-dark-grey;
+        font-size: 3.3rem;
+
+        &:hover {
+            color: $color-black;
+        }
     }
 }
