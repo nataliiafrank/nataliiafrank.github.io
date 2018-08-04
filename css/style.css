@@ -248,11 +248,28 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    .section-contact .section-contact__text .email {
+      font-size: 2.8rem;
+      font-weight: 700;
+      transition: all .2s; }
+      .section-contact .section-contact__text .email:link, .section-contact .section-contact__text .email:visited {
+        color: inherit; }
+      .section-contact .section-contact__text .email:hover {
+        color: #fff; }
   .section-contact .section-contact__icons {
     position: absolute;
     bottom: 2rem;
-    right: 2rem;
-    color: #777;
-    font-size: 3.3rem; }
-    .section-contact .section-contact__icons:hover {
-      color: #333; }
+    color: #333;
+    font-size: 3.3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .section-contact .section-contact__icons .social-link:link, .section-contact .section-contact__icons .social-link:visited {
+      color: inherit; }
+    .section-contact .section-contact__icons .icon {
+      display: inline-block;
+      margin: 2rem 3rem;
+      transition: all .2s; }
+      .section-contact .section-contact__icons .icon:hover {
+        color: #fff; }

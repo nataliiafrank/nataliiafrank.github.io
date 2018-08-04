@@ -13,3 +13,10 @@
     color: $color;
     font-size: 2rem;
 }
+
+@mixin remove-default-link-style {
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+}
