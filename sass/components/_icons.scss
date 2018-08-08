@@ -1,0 +1,14 @@
+.icon {
+    display: inline-block;
+    margin: 2rem 3rem;
+    transition: all .2s;
+    color: $color-black;
+    font-size: 3.3rem;
+
+    &:hover {
+    color: $color-white;
+    }
+} 
+.social-link {
+    @include remove-default-link-style; 
+}

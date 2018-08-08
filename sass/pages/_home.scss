@@ -46,13 +46,33 @@
     }
 }
 
-.section-projects__row {
-    height: 30vh;
-    margin-bottom: 4rem;
-    .border {
-        border: .3rem solid $color-black;
-    }
+.section-projects {
+    margin-bottom: 10rem;
+
+    // &>.heading-tertiary {
+    //     margin-bottom: 10rem;
+    // }
 }
+// .section-projects__row {
+//     height: 30vh;
+//     margin-bottom: 4rem;
+//     .border {
+//         border: .3rem solid $color-black;
+//     }
+// }
+
+.project-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 6rem 0;
+}
+.card-box {
+    width: 40%;
+}
+
+
 
 .section-contact {
     height: 60vh;
@@ -87,8 +107,6 @@
     .section-contact__icons {
         position: absolute;
         bottom: 2rem;
-        color: $color-black;
-        font-size: 3.3rem;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -97,16 +115,6 @@
         .social-link {
             @include remove-default-link-style; 
         }
-
-        .icon {
-            display: inline-block;
-            margin: 2rem 3rem;
-            transition: all .2s;
-
-            &:hover {
-            color: $color-white;
-            }
-        } 
         
     }
 }

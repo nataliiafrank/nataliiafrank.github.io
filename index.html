@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/scroll.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
@@ -21,19 +22,19 @@
         <nav>
             <ul class="nav">
                 <li>
-                    <a href="#">Home</a>
+                    <a class="scroll" href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a class="scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#">Skills</a>
+                    <a class="scroll" href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a class="scroll" href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="#" class="button--yellow">Contact</a>
+                    <a href="#contact" class="button button--yellow scroll">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -51,132 +52,250 @@
     </header>
 
     <main>
-        <div class="section-about">
+        <div class="section-about" id="about">
             <div class="section-about__text">
                 I’m a front-end developer and web designer with a passion for creating clean and modern interfaces that solve real world
                 problems. I enjoy converting complex ideas into simple design and creating user friendly applications.
             </div>
 
-            <div class="button">
-                <a href="#" class="button--yellow">Download Resume</a>
+            <div class="section-about__button">
+                <a href="#" class="button button--yellow">Download Resume</a>
             </div>
         </div>
 
-        <div class="section-skills row">
+        <div class="section-skills row" id="skills">
             <div class="col-1-of-2 skills-box">
                 <h3 class="heading-secondary">What I can do</h3>
 
-                    <div class="table-skills">
-                        <div>
-                            <i class="devicon devicon-javascript-plain"></i> Javascript
-                        </div>
-                        <div>
-                            <i class="devicon devicon-html5-plain-wordmark"></i> HTML 5
-                        </div>
-                        <div>
-                            <i class="devicon devicon-css3-plain-wordmark"></i> CSS 3
-                        </div>
-                        <!-- <div>
+                <div class="table-skills">
+                    <div>
+                        <i class="devicon devicon-javascript-plain"></i> Javascript
+                    </div>
+                    <div>
+                        <i class="devicon devicon-html5-plain-wordmark"></i> HTML 5
+                    </div>
+                    <div>
+                        <i class="devicon devicon-css3-plain-wordmark"></i> CSS 3
+                    </div>
+                    <!-- <div>
                             <i class="devicon devicon-react-original"></i> React
                         </div> -->
-                
-                        <div>
-                            <i class="devicon devicon-sass-original"></i> SASS
-                        </div>
-                        <div>
-                            <i class="devicon devicon-bootstrap-plain"></i> Bootstrap
-                        </div>
-                        <div>
-                            <i class="devicon devicon-photoshop-plain"></i> Photoshop
-                        </div>
-                        <div>
-                            <i class="devicon devicon-illustrator-plain"></i> Illustrator
-                        </div>
-                   
-                        <div>
-                            <i class="devicon devicon-jquery-plain"></i> jQuery
-                        </div>
-                        <div>
-                            <i class="devicon devicon-nodejs-plain"></i> Node Js
-                        </div>
-                        <div>
-                            <i class="devicon devicon-express-original"></i> Express Js
-                        </div>
-                        <div>
-                            <i class="devicon devicon-github-plain"></i> GitHub
-                        </div>
-                   
-                        <div>
-                            <i class="devicon devicon-mysql-plain"></i> MySQL
-                        </div>
-                        <div>
-                            <i class="devicon devicon-sequelize-plain"></i> Sequelize
-                        </div>
-                        <div>
-                            <i class="devicon devicon-mongodb-plain"></i> MongoDB
-                        </div>
-                        <div>
-                            <i class="devicon devicon-heroku-original"></i> Heroku
-                        </div>
+
+                    <div>
+                        <i class="devicon devicon-sass-original"></i> SASS
                     </div>
-            
+                    <div>
+                        <i class="devicon devicon-bootstrap-plain"></i> Bootstrap
+                    </div>
+                    <div>
+                        <i class="devicon devicon-photoshop-plain"></i> Photoshop
+                    </div>
+                    <div>
+                        <i class="devicon devicon-illustrator-plain"></i> Illustrator
+                    </div>
+
+                    <div>
+                        <i class="devicon devicon-jquery-plain"></i> jQuery
+                    </div>
+                    <div>
+                        <i class="devicon devicon-nodejs-plain"></i> Node Js
+                    </div>
+                    <div>
+                        <i class="devicon devicon-express-original"></i> Express Js
+                    </div>
+                    <div>
+                        <i class="devicon devicon-github-plain"></i> GitHub
+                    </div>
+
+                    <div>
+                        <i class="devicon devicon-mysql-plain"></i> MySQL
+                    </div>
+                    <div>
+                        <i class="devicon devicon-sequelize-plain"></i> Sequelize
+                    </div>
+                    <div>
+                        <i class="devicon devicon-mongodb-plain"></i> MongoDB
+                    </div>
+                    <div>
+                        <i class="devicon devicon-heroku-original"></i> Heroku
+                    </div>
+                </div>
+
             </div>
             <div class="col-1-of-2 section-skills--yellow">
-
+                &nbsp
             </div>
         </div>
 
-        <div class="section-projects">
+        <div class="section-projects" id="projects">
             <h3 class="heading-tertiary">My recent projects</h3>
 
-            <div class="section-projects__row row">
-                <div class="col-1-of-2-with-gutter border">
-                    poject-1
+            <div class="project-row">
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--1">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--odd">
+                                Cross Bite
+                                <br> Meal Planner App
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                The App is built with: HTML, CSS/ Bootstrap, Javascript, jQuery, API/AJAX, Firebase Cloud, Firebase Authentication, Google
+                                OAuth
+                            </div>
+                            <div class="card__button">
+                                <a href="#" class="button button--white">Visit the App</a>
+                            </div>
+                            <div class="icon">
+                                <a href="https://github.com/nataliiafrank/Cross-Bite" class="social-link" target="_blank">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-1-of-2-with-gutter border">
-                    poject-2
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--2">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--even">
+                                In A Pinch
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                Eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest
+                                spot on the couch to claw at the fabric before taking a catnap hack up furballs yowling nonstop
+                                the whole night. Catty ipsum.
+                            </div>
+                            <div class="card__button">
+                                <a href="#" class="button button--white">Visit the App</a>
+                            </div>
+                            <div class="icon">
+                                <a href="https://github.com/nataliiafrank/inApinch" class="social-link" target="_blank">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="section-projects__row row">
-                <div class="col-1-of-2-with-gutter border">
-                    poject-3
+
+            <div class="project-row">
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--3">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--odd">
+                                Simpsons Clicky Game
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                Eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest
+                                spot on the couch to claw at the fabric before taking a catnap hack up furballs yowling nonstop
+                                the whole night. Catty ipsum.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-1-of-2-with-gutter border">
-                    poject-4
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--4">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--even">
+                                Coming Soon
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                Eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest
+                                spot on the couch to claw at the fabric before taking a catnap hack up furballs yowling nonstop
+                                the whole night. Catty ipsum.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="section-projects__row row">
-                <div class="col-1-of-2-with-gutter border">
-                    poject-5
+            <div class="project-row">
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--5">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--odd">
+                                Friends Trivia
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                Eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest
+                                spot on the couch to claw at the fabric before taking a catnap hack up furballs yowling nonstop
+                                the whole night. Catty ipsum.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-1-of-2-with-gutter border">
-                    poject-6
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__img card__img--6">
+                                &nbsp
+                            </div>
+                            <div class="card__heading card__heading--even">
+                                Coming Soon
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <div class="card__description">
+                                Eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest
+                                spot on the couch to claw at the fabric before taking a catnap hack up furballs yowling nonstop
+                                the whole night. Catty ipsum.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="section-contact">
+        <div class="section-contact" id="contact">
             <!-- <h3 class="heading-tertiary">Contact me</h3> -->
             <p class="section-contact__text text-main">
-                Have a question about me or my work? <br>
-                Have a project in mind you think I'd be a good fit for? <br>
-                Just want to say hi? <br>
-                Feel free to send me an email to 
-                <a href="mailto:nataliiafrank@gmail.com" class="email">nataliiafrank@gmail.com</a>. <br> 
-                I'll be happy to answer your questings and make a new connection! 
+                Have a question about me or my work?
+                <br> Have a project in mind you think I'd be a good fit for?
+                <br> Just want to say hi?
+                <br> Feel free to send me an email to
+                <a href="mailto:nataliiafrank@gmail.com" class="email">nataliiafrank@gmail.com</a>.
+                <br> I'll be happy to answer your questings and make a new connection!
             </p>
-            
+
             <div class="section-contact__icons">
                 <div class="icon">
-                    <a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
                 </div>
                 <div class="icon">
-                    <a href="https://github.com/nataliiafrank" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
-                    
+                    <a href="https://github.com/nataliiafrank" class="social-link" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
                 </div>
                 <div class="icon">
-                    <a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a>
-                    
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+
                 </div>
             </div>
             <!-- <h4>Get in touch</h4> -->
@@ -184,7 +303,7 @@
 
     </main>
 
-<script src="https://unpkg.com/ionicons@4.2.6/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@4.2.6/dist/ionicons.js"></script>
 </body>
 
 </html>

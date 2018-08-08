@@ -1,0 +1,92 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 500px;
+    
+
+    &__side {
+        height: 500px;
+        width: 100%;
+        // border: .3rem solid $color-black;
+        font-size: 2rem;
+
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background: $color-white;
+            position: relative;
+        }
+
+        &--back {
+            background: $color-primary;
+            transform: rotateY(180deg);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+// .card:hover .card__side - when hover card effect occur
+    &:hover &__side--front {
+        transform: rotateY(-180deg)
+    }
+    &:hover &__side--back {
+        transform: rotateY(0)
+    }
+
+    // FRONT SIDE STYLING
+    &__img {
+        background-size: cover;
+        height: 100%;
+
+        &--1 {
+            background-image: url(../img/cross-bite.png);
+            background-position: center;
+        }
+        &--2 {
+            background-image: url(../img/in-a-pinch.png);
+        }
+        &--3 {
+            background-image: url(../img/simpsons-game.png);
+            background-position: center;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 30px;
+        
+        background-color: $color-primary; 
+
+        &--odd {
+            -webkit-clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
+        }
+
+        &--even {
+            -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+            text-align: right;
+        }
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-align: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}

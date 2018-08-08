@@ -1,16 +1,10 @@
 .button {
-    margin: 0 auto;
-    padding: 2rem 0;
-    display: inline-block;
-}
-
-.button--yellow {
     &:link,
     &:visited {
-        background-color: $color-primary;
+        
         text-decoration: none;
         text-transform: uppercase;
-        color: $color-white;
+    
         font-size: 2rem;
         font-weight: 300;
         padding: 1.5rem 2rem;
@@ -18,7 +12,7 @@
     }
 
     &:hover {
-        background-color: $color-primary-dark;
+
         transform: translateY(-5px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
@@ -33,4 +27,30 @@
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
     }
+
+    &--yellow {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.section-about__button {
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: inline-block;
+}
+
+.card__button {
+    text-align: center;
+    padding: 2rem 0;
+    display: inline-block;
 }
