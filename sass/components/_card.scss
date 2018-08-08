@@ -15,6 +15,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 

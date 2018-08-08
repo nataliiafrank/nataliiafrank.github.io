@@ -13,6 +13,7 @@
     text-align: center;
     &--yellow {
         background-color: $color-primary;
+        -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
         clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
     }
     
