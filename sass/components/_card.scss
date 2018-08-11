@@ -8,7 +8,6 @@
     &__side {
         height: 500px;
         width: 100%;
-        // border: .3rem solid $color-black;
         font-size: 2rem;
 
         transition: all 0.8s ease;
@@ -68,7 +67,6 @@
         left: 0;
         bottom: 0;
         padding: 30px;
-        
         background-color: $color-primary; 
 
         &--odd {
@@ -83,6 +81,7 @@
         }
     }
 
+    // BACK SIDE STYLING
     &__description {
         font-size: 1.8rem;
         font-weight: 300;
