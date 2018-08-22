@@ -27,6 +27,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   box-sizing: border-box; }
@@ -139,6 +148,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15); }
     .card__side--front {
@@ -208,20 +218,40 @@ body {
     left: 70%;
     transform: translate(-50%, -50%);
     width: 50%; }
+    @media (max-width: 56.25em) {
+      .header__text-box {
+        top: 30%; } }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        width: 40%;
+        font-size: 2.8rem; } }
+  @media (max-width: 56.25em) {
+    .header {
+      height: 60vh; } }
 
 .header__polygon {
   height: 100%;
   background-color: #fee333;
+  -webkit-clip-path: polygon(0 0, 38% 0, 45% 100%, 0% 100%);
   clip-path: polygon(0 0, 38% 0, 45% 100%, 0% 100%);
   z-index: -1; }
+  @media (max-width: 37.5em) {
+    .header__polygon {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
 
 .header__picture__box {
   position: absolute;
   top: 40%;
   left: 35%;
   transform: translate(-50%, -50%); }
+  @media (max-width: 56.25em) {
+    .header__picture__box {
+      top: 30%;
+      left: 35%; } }
 
 .header__picture__image {
+  -webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 60% 0, 60% 14%, 100% 14%, 100% 85%, 100% 100%, 85% 100%, 32% 100%, 32% 85%, 0% 85%);
   clip-path: polygon(0% 15%, 0 0, 15% 0%, 60% 0, 60% 14%, 100% 14%, 100% 85%, 100% 100%, 85% 100%, 32% 100%, 32% 85%, 0% 85%);
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -287,14 +317,29 @@ nav {
     font-size: 3rem;
     color: #333;
     margin-bottom: 3rem; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 10rem 5rem; } }
 
 .section-skills {
   height: 45vh;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  color: #333;
+  margin-bottom: 6rem; }
   .section-skills--yellow {
+    width: 50%;
     background-color: #fee333;
+    -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
     clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%); }
+  @media (max-width: 56.25em) {
+    .section-skills {
+      height: auto;
+      padding: 2rem 0; } }
   .section-skills .skills-box {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -316,16 +361,26 @@ nav {
 
 .section-projects {
   margin-bottom: 10rem; }
-
-.project-row {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 6rem 0; }
-
-.card-box {
-  width: 40%; }
+  @media (max-width: 56.25em) {
+    .section-projects {
+      margin-bottom: 5rem; } }
+  .section-projects .project-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 6rem 0; }
+    @media (max-width: 56.25em) {
+      .section-projects .project-row {
+        flex-direction: column;
+        align-items: center;
+        margin: 0; } }
+  .section-projects .card-box {
+    width: 40%; }
+    @media (max-width: 56.25em) {
+      .section-projects .card-box {
+        width: 80%;
+        margin: 4rem 0; } }
 
 .section-contact {
   height: 60vh;
@@ -349,6 +404,9 @@ nav {
         color: inherit; }
       .section-contact .section-contact__text .email:hover {
         color: #fff; }
+    @media (max-width: 56.25em) {
+      .section-contact .section-contact__text {
+        width: 70%; } }
   .section-contact .section-contact__icons {
     position: absolute;
     bottom: 2rem;
@@ -358,3 +416,9 @@ nav {
     justify-content: flex-end; }
     .section-contact .section-contact__icons .social-link:link, .section-contact .section-contact__icons .social-link:visited {
       color: inherit; }
+    @media (max-width: 56.25em) {
+      .section-contact .section-contact__icons .social-link {
+        font-size: 4rem; } }
+    @media (max-width: 56.25em) {
+      .section-contact .section-contact__icons {
+        justify-content: center; } }
