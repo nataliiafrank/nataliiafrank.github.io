@@ -9,7 +9,8 @@
         width: 50%;
 
         @include respond(tab-port) {
-            top: 30%;
+            top: 55%;
+            width: 40%
         }
 
         @include respond(phone) {
@@ -17,8 +18,9 @@
             font-size: 2.8rem;
         }
     }
+
     @include respond(tab-port) {
-        height: 60vh;
+        height: 80vh;
     }
 }
 
@@ -42,8 +44,9 @@
         transform: translate(-50%, -50%);
 
         @include respond(tab-port) {
-            top: 30%;
+            top: 35%;
             left: 35%;
+            width: 45%;
         }
 }
 
@@ -53,4 +56,8 @@
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(tab-port) {
+       
+    }
 }

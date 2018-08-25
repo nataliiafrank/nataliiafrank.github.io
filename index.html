@@ -20,6 +20,10 @@
         <div class="header__polygon"></div>
 
         <nav>
+            <div class="nav__button--toggle">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+
             <ul class="nav">
                 <li>
                     <a class="scroll" href="#">Home</a>
@@ -308,6 +312,17 @@
     </main>
 
     <script src="https://unpkg.com/ionicons@4.2.6/dist/ionicons.js"></script>
+    <script>
+        // Toggle Function
+        function classToggle() {
+            const navs = document.querySelectorAll('.nav')
+            console.log(navs)
+            
+            navs.forEach(item => item.classList.toggle('toggle-show'));
+            console.log("after toggel", navs)
+        }
+        document.querySelector('.nav__button--toggle').addEventListener('click', classToggle);
+    </script>
 </body>
 
 </html>

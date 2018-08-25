@@ -1,16 +1,23 @@
 nav {
-    @include clearfix;
+    // @include clearfix;
     position: absolute;
     top: 1rem;
     right: 0;
+    z-index: 3;
+
+    @include respond(tab-port) {
+        width: 100%;
+        top: 0;
+    }
 }
 
 .nav {
     list-style: none;
-    float: right;
+    display: flex;
+    flex-direction: row;
+
     li {
-        display: inline-block;
-        margin-right: 30px;
+        margin-right: 3rem;
 
         &:not(:last-child) {
             a:link,
@@ -18,5 +25,36 @@ nav {
                 @include style-link-text($color-dark-grey);
             }
         }
+
+        @include respond(tab-port) {
+            margin: 2rem 0;
+        }
+
     }
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        margin-top: -6.5rem;
+
+        &.toggle-show {
+            display: flex;
+            background: $color-primary;
+            box-shadow: 0 4px 10px -2px rgba($color-black, .15);
+        }
+    }
+
+    &__button--toggle {
+        font-size: 2.5rem;
+        display: none;
+
+        @include respond(tab-port) {
+            margin-top: 2rem;
+            margin-left: 3rem;
+            display: inline-block;
+            cursor: pointer;
+        }
+    } 
 }

@@ -220,14 +220,15 @@ body {
     width: 50%; }
     @media (max-width: 56.25em) {
       .header__text-box {
-        top: 30%; } }
+        top: 55%;
+        width: 40%; } }
     @media (max-width: 37.5em) {
       .header__text-box {
         width: 40%;
         font-size: 2.8rem; } }
   @media (max-width: 56.25em) {
     .header {
-      height: 60vh; } }
+      height: 80vh; } }
 
 .header__polygon {
   height: 100%;
@@ -247,8 +248,9 @@ body {
   transform: translate(-50%, -50%); }
   @media (max-width: 56.25em) {
     .header__picture__box {
-      top: 30%;
-      left: 35%; } }
+      top: 35%;
+      left: 35%;
+      width: 45%; } }
 
 .header__picture__image {
   -webkit-clip-path: polygon(0% 15%, 0 0, 15% 0%, 60% 0, 60% 14%, 100% 14%, 100% 85%, 100% 100%, 85% 100%, 32% 100%, 32% 85%, 0% 85%);
@@ -290,18 +292,19 @@ body {
 nav {
   position: absolute;
   top: 1rem;
-  right: 0; }
-  nav::after {
-    content: "";
-    display: table;
-    clear: both; }
+  right: 0;
+  z-index: 3; }
+  @media (max-width: 56.25em) {
+    nav {
+      width: 100%;
+      top: 0; } }
 
 .nav {
   list-style: none;
-  float: right; }
+  display: flex;
+  flex-direction: row; }
   .nav li {
-    display: inline-block;
-    margin-right: 30px; }
+    margin-right: 3rem; }
     .nav li:not(:last-child) a:link,
     .nav li:not(:last-child) a:visited {
       text-decoration: none;
@@ -309,6 +312,29 @@ nav {
       font-weight: 300;
       color: #777;
       font-size: 2rem; }
+    @media (max-width: 56.25em) {
+      .nav li {
+        margin: 2rem 0; } }
+  @media (max-width: 56.25em) {
+    .nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+      margin-top: -6.5rem; }
+      .nav.toggle-show {
+        display: flex;
+        background: #fee333;
+        box-shadow: 0 4px 10px -2px rgba(51, 51, 51, 0.15); } }
+  .nav__button--toggle {
+    font-size: 2.5rem;
+    display: none; }
+    @media (max-width: 56.25em) {
+      .nav__button--toggle {
+        margin-top: 2rem;
+        margin-left: 3rem;
+        display: inline-block;
+        cursor: pointer; } }
 
 .section-about {
   padding: 10rem;
