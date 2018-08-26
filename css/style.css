@@ -144,6 +144,7 @@ body {
     height: 500px;
     width: 100%;
     font-size: 2rem;
+    overflow: hidden;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -169,11 +170,13 @@ body {
     background-size: cover;
     height: 100%; }
     .card__img--1 {
+      background-image: url(../img/get-the-gist.png); }
+    .card__img--2 {
       background-image: url(../img/cross-bite.png);
       background-position: center; }
-    .card__img--2 {
-      background-image: url(../img/in-a-pinch.png); }
     .card__img--3 {
+      background-image: url(../img/in-a-pinch.png); }
+    .card__img--4 {
       background-image: url(../img/simpsons-game.png);
       background-position: center; }
   .card__heading {
@@ -185,11 +188,11 @@ body {
     padding: 30px;
     background-color: #fee333; }
     .card__heading--odd {
-      -webkit-clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
-      clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%); }
+      -webkit-clip-path: polygon(calc(0% - 1px) 0, calc(100% + 1px) 44%, calc(100% + 1px) calc(100% + 1px), calc(0% - 1px) calc(100% + 1px));
+      clip-path: polygon(calc(0% - 1px) 0, calc(100% + 1px) 44%, calc(100% + 1px) calc(100% + 1px), calc(0% - 1px) calc(100% + 1px)); }
     .card__heading--even {
       -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(calc(0% - 1px) 44%, calc(100% + 1px) 0, calc(100% + 1px) 100%, calc(0% - 1px) 100%);
       text-align: right; }
   .card__description {
     font-size: 1.8rem;
@@ -302,7 +305,8 @@ nav {
 .nav {
   list-style: none;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: flex-end; }
   .nav li {
     margin-right: 3rem; }
     .nav li:not(:last-child) a:link,
@@ -335,6 +339,13 @@ nav {
         margin-left: 3rem;
         display: inline-block;
         cursor: pointer; } }
+  .nav.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 0;
+    width: 100%; }
 
 .section-about {
   padding: 10rem;

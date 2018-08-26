@@ -9,7 +9,6 @@
         height: 500px;
         width: 100%;
         font-size: 2rem;
-
         transition: all 0.8s ease;
         position: absolute;
         top: 0;
@@ -48,13 +47,16 @@
         height: 100%;
 
         &--1 {
+            background-image: url(../img/get-the-gist.png);
+        }
+        &--2 {
             background-image: url(../img/cross-bite.png);
             background-position: center;
         }
-        &--2 {
+        &--3 {
             background-image: url(../img/in-a-pinch.png);
         }
-        &--3 {
+        &--4 {
             background-image: url(../img/simpsons-game.png);
             background-position: center;
         }
@@ -70,13 +72,13 @@
         background-color: $color-primary; 
 
         &--odd {
-            -webkit-clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 44%, 100% 100%, 0% 100%);
+            -webkit-clip-path: polygon(calc(0% - 1px) 0, calc(100% + 1px) 44%, calc(100% + 1px) calc(100% + 1px), calc(0% - 1px) calc(100% + 1px));
+            clip-path: polygon(calc(0% - 1px) 0, calc(100% + 1px) 44%, calc(100% + 1px) calc(100% + 1px), calc(0% - 1px) calc(100% + 1px));
         }
 
         &--even {
             -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(calc(0% - 1px) 44%, calc(100% + 1px) 0, calc(100% + 1px) 100%, calc(0% - 1px) 100%);
             text-align: right;
         }
     }
