@@ -9,19 +9,34 @@
         width: 50%;
 
         @include respond(tab-port) {
-            top: 55%;
+            top: 50%;
             width: 40%
         }
 
         @include respond(phone) {
             width: 40%;
-            font-size: 2.8rem;
+            top: 46%;
+            font-size: 2rem;
         }
+
+        @include respond(small-phone) {
+            top: 45%;
+            left: 60%;
+            font-size: 1rem;
+        } 
     }
 
     @include respond(tab-port) {
         height: 80vh;
     }
+
+    @include respond(phone) {
+        height: 65vh; 
+    }
+
+    @include respond(small-phone) {
+        height: 60vh; 
+    } 
 }
 
 .header__polygon {
@@ -48,6 +63,15 @@
             left: 35%;
             width: 45%;
         }
+
+        @include respond(phone) {
+            top: 32%;
+        }
+
+        @include respond(small-phone) {
+            top: 25%;
+            left: 37%;
+        } 
 }
 
 .header__picture__image {
@@ -57,7 +81,11 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
-    @include respond(tab-port) {
-       
+    @include respond(phone) {
+       width: 280px;     
     }
+
+    @include respond(small-phone) {
+        width: 230px; 
+    } 
 }
