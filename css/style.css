@@ -180,8 +180,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-perspective: 0;
     -webkit-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    visibility: visible;
     backface-visibility: hidden;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15);
     box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.15); }
