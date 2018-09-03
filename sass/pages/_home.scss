@@ -1,15 +1,30 @@
 .section-about {
-    padding: 10rem;
+    padding: 15rem 10rem;
     text-align: center;
     &__text {
         font-size: 3rem;
         color: $color-black;
         margin-bottom: 3rem;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 2rem;
+        } 
+    }
+    @include respond(tab-port) {
+        padding: 10rem 4rem;
     }
 
-    @include respond(tab-port) {
-        padding: 10rem 5rem;
+    @include respond(phone) {
+        padding: 10rem 3rem;
     }
+
+    @include respond(small-phone) {
+        padding: 10rem 2rem;
+    } 
 }
 
 .section-skills {
@@ -26,11 +41,19 @@
         background-color: $color-primary;
         -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
         clip-path: polygon(7% 0, 100% 0, 100% 100%, 19% 100%);
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     @include respond(tab-port) {
         height: auto;
         padding: 2rem 0;
+    }
+
+    @include respond(phone) {
+        font-size: 2rem;
     }
     
     .skills-box {
@@ -38,6 +61,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include respond(phone) {
+            width: 100%;
+            align-items: center;
+        }
     }
 
     .devicon {
@@ -57,6 +85,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
 
         div {
             margin: 0.8rem 1.5rem;
@@ -72,7 +105,7 @@
     }
 
     .project-row {
-        width: 100%;
+        min-width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -88,15 +121,23 @@
     .card-box {
         width: 40%;
 
+        @include respond(tab-land) {
+            width: 47%;
+        }
+
         @include respond(tab-port) {
-            width: 80%;
+            width: 90%;
             margin: 4rem 0;
         }
+
+        @include respond(small-phone) {
+            width: 95%;
+        } 
     }
 }
 
 .section-contact {
-    height: 60vh;
+    height: 550px;
     background-color: $color-primary; 
     -webkit-clip-path: polygon(50% 25%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
     clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
@@ -123,6 +164,11 @@
 
         @include respond(tab-port) {
             width: 70%;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+            font-size: 2rem;
         }
     }
 

@@ -15,14 +15,15 @@
 
         @include respond(phone) {
             width: 40%;
-            top: 46%;
+            top: 340px;
             font-size: 2rem;
         }
 
         @include respond(small-phone) {
-            top: 45%;
+            top: 340px;
             left: 60%;
             font-size: 1rem;
+            width: 42%;
         } 
     }
 
@@ -31,12 +32,8 @@
     }
 
     @include respond(phone) {
-        height: 65vh; 
+        height: 500px; 
     }
-
-    @include respond(small-phone) {
-        height: 60vh; 
-    } 
 }
 
 .header__polygon {
@@ -69,7 +66,7 @@
         }
 
         @include respond(small-phone) {
-            top: 25%;
+            top: 200px;
             left: 37%;
         } 
 }
@@ -86,6 +83,6 @@
     }
 
     @include respond(small-phone) {
-        width: 230px; 
+        width: 220px; 
     } 
 }
