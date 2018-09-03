@@ -9,6 +9,7 @@ body {
 .heading-primary {
     color: $color-black;
     text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     &--main {
         display: inline-block;
@@ -17,8 +18,11 @@ body {
         margin-bottom: 1rem;
         background-color: $color-white;
         padding: 0 1rem;
+        -webkit-animation-name: moveInRight;
         animation-name: moveInRight;
+        -webkit-animation-duration: 1s;
         animation-duration: 1s;
+        -webkit-animation-timing-function: ease-out;
         animation-timing-function: ease-out;
         /* animation-delay: 3s;
         animation-iteration-count: 3; */
@@ -34,6 +38,7 @@ body {
         background-color: $color-black;
         color: $color-white;
         padding: 0 1rem;
+        -webkit-animation: moveInRight 1s ease-out;
         animation: moveInRight 1s ease-out;
 
         @include respond(phone) {

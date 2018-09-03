@@ -30,8 +30,17 @@
 .section-skills {
     height: 45vh;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
     justify-content: stretch;
     color: $color-black;
     margin-bottom: $gutter-vertical;
@@ -58,12 +67,23 @@
     
     .skills-box {
         width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
 
         @include respond(phone) {
             width: 100%;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
     }
@@ -81,9 +101,21 @@
         font-size: 2rem;
         width: 100%;
         margin-left: 3rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         
 
@@ -106,13 +138,28 @@
 
     .project-row {
         min-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
         margin: 6rem 0;
 
         @include respond(tab-port) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             margin: 0;
         }
@@ -140,9 +187,14 @@
     height: 550px;
     background-color: $color-primary; 
     -webkit-clip-path: polygon(50% 25%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 25%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
     text-align: right;
     position: relative;
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(50% 12%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+        clip-path: polygon(50% 12%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+    }
 
     .section-contact__text {
         margin: 2rem 0;
@@ -150,12 +202,14 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        @include transform-translate5050;
 
         .email {
             @include remove-default-link-style; 
             font-size: 2.8rem;
             font-weight: 700;
+            -webkit-transition: all .2s;
+            -o-transition: all .2s;
             transition: all .2s;
             &:hover {
                 color: $color-white;
@@ -169,6 +223,7 @@
         @include respond(phone) {
             width: 85%;
             font-size: 2rem;
+            margin: 0;
         }
     }
 
@@ -176,8 +231,17 @@
         position: absolute;
         bottom: 2rem;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
 
         .social-link {

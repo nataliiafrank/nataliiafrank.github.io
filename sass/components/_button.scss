@@ -7,23 +7,31 @@
         font-size: 2rem;
         font-weight: 300;
         padding: 1.5rem 2rem;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all .2s;
     }
 
     &:hover {
-
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
         transform: translateY(-5px);
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
         &::after {
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+            -ms-transform: scaleX(1.4);
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
-        
         }
     }
 
     &:active {
+        -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
         transform: translateY(-1px);
+        -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
     }
 
