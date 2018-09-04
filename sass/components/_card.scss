@@ -88,7 +88,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        padding: 30px;
+        padding: 5rem 3rem;
         background-color: $color-primary; 
 
         &--odd {
@@ -100,6 +100,11 @@
             -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(calc(0% - 1px) 44%, calc(100% + 1px) 0, calc(100% + 1px) 100%, calc(0% - 1px) 100%);
             text-align: right;
+        }
+
+        span {
+            display: block;
+            font-weight: 300;
         }
     }
 

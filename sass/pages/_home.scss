@@ -1,17 +1,22 @@
 .section-about {
-    padding: 15rem 10rem;
+    font-family: 'Merriweather', serif;
+    padding: 10rem;
     text-align: center;
     &__text {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: $color-black;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) {
+            font-size: 2.2rem;
+        }
 
         @include respond(phone) {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         @include respond(small-phone) {
-            font-size: 2rem;
+            font-size: 1.8rem;
         } 
     }
     @include respond(tab-port) {
@@ -91,6 +96,10 @@
     .devicon {
         font-size: 3rem;
         color: $color-primary-dark;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
     }
 
     h3 {
@@ -121,6 +130,10 @@
 
         @include respond(phone) {
             margin-left: 0;
+        }
+        
+        @include respond(small-phone) {
+            font-size: 1.5rem;
         }
 
         div {

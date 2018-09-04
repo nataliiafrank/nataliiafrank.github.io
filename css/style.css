@@ -112,6 +112,7 @@ body {
   color: #333; }
 
 .button:link, .button:visited {
+  font-family: 'Lato', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2rem;
@@ -231,7 +232,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 30px;
+    padding: 5rem 3rem;
     background-color: #fee333; }
     .card__heading--odd {
       -webkit-clip-path: polygon(calc(0% - 1px) 0, calc(100% + 1px) 44%, calc(100% + 1px) calc(100% + 1px), calc(0% - 1px) calc(100% + 1px));
@@ -240,6 +241,9 @@ body {
       -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
       clip-path: polygon(calc(0% - 1px) 44%, calc(100% + 1px) 0, calc(100% + 1px) 100%, calc(0% - 1px) 100%);
       text-align: right; }
+    .card__heading span {
+      display: block;
+      font-weight: 300; }
   .card__description {
     font-size: 1.8rem;
     font-weight: 300;
@@ -411,18 +415,22 @@ nav {
     box-shadow: 0 2px 10px -2px rgba(51, 51, 51, 0.15); }
 
 .section-about {
-  padding: 15rem 10rem;
+  font-family: 'Merriweather', serif;
+  padding: 10rem;
   text-align: center; }
   .section-about__text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #333;
-    margin-bottom: 3rem; }
+    margin-bottom: 5rem; }
+    @media (max-width: 56.25em) {
+      .section-about__text {
+        font-size: 2.2rem; } }
     @media (max-width: 37.5em) {
       .section-about__text {
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
     @media (max-width: 28.75em) {
       .section-about__text {
-        font-size: 2rem; } }
+        font-size: 1.8rem; } }
   @media (max-width: 56.25em) {
     .section-about {
       padding: 10rem 4rem; } }
@@ -484,6 +492,9 @@ nav {
   .section-skills .devicon {
     font-size: 3rem;
     color: #fcdb07; }
+    @media (max-width: 37.5em) {
+      .section-skills .devicon {
+        font-size: 2.5rem; } }
   .section-skills h3 {
     margin-bottom: 2rem; }
   .section-skills .table-skills {
@@ -506,6 +517,9 @@ nav {
     @media (max-width: 37.5em) {
       .section-skills .table-skills {
         margin-left: 0; } }
+    @media (max-width: 28.75em) {
+      .section-skills .table-skills {
+        font-size: 1.5rem; } }
     .section-skills .table-skills div {
       margin: 0.8rem 1.5rem; }
 
