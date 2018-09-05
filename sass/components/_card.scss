@@ -52,14 +52,30 @@
     }
 
 // .card:hover .card__side - when hover card effect occur
-    &:hover &__side--front {
-        -webkit-transform: rotateY(-180deg);
-        transform: rotateY(-180deg)
+
+    @include respond(all-but-phone) {
+        &:hover &__side--front {
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+        }
+        &:hover &__side--back {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+        }
     }
-    &:hover &__side--back {
-        -webkit-transform: rotateY(0);
-        transform: rotateY(0)
-    }
+
+    @include respond(phone) {
+        &:active &__side--front,
+        &:hover &__side--front {
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+        }
+        &:active &__side--back,
+        &:hover &__side--back {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+        }    
+    } 
 
     // FRONT SIDE STYLING
     &__img {

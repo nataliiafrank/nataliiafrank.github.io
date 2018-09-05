@@ -38,6 +38,9 @@
    @if($breakpoint) == large-desktop {
        @media (min-width: 112.5em) {@content}; // 1800px
    } 
+   @if($breakpoint) == all-but-phone {
+       @media (min-width: 37.5em) {@content}; // 600px
+   } 
 }
 
 @mixin box-shadow {
