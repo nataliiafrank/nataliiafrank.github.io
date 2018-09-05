@@ -207,22 +207,14 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-  @media (min-width: 37.5em) {
-    .card:hover .card__side--front {
-      -webkit-transform: rotateY(-180deg);
-      transform: rotateY(-180deg); }
-    .card:hover .card__side--back {
-      -webkit-transform: rotateY(0);
-      transform: rotateY(0); } }
-  @media (max-width: 37.5em) {
-    .card:active .card__side--front,
-    .card:hover .card__side--front {
-      -webkit-transform: rotateY(-180deg);
-      transform: rotateY(-180deg); }
-    .card:active .card__side--back,
-    .card:hover .card__side--back {
-      -webkit-transform: rotateY(0);
-      transform: rotateY(0); } }
+  .card:hover .card__side--front,
+  .card:active .card__side--front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back,
+  .card:active .card__side--back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0); }
   .card__img {
     background-size: cover;
     height: 100%; }
